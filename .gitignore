@@ -1,21 +1,21 @@
-# =========================================================== -*- gitignore -*-
-# @file    .gitignore
-# @brief   Files and patterns for files and subdirs that git should ignore
-# @date    CREATION_DATE
-# @license Please see the file named LICENSE in the project directory
-# @website https://github.com/caltechlibrary/PROJECT
+#-------------------------------------------------------------------------------------
+# FILE          | .gitignore
+# SUMMARY       | Files and patterns for files and directories that git should ignore
+# DATE          | ####/##/## CREATION_DATE
+# LICENSE       | Please see the file named LICENSE in the project directory
+# PROJECT SITE  | https://github.com/caltechlibrary/PROJECT
 #
-# The approach we suggest is to add ONLY project-specific rules here. Put
-# rules that apply to your way of doing things (and the particular tools you
-# happen to use) into a global git ignore file as described in the section
-# "Configuring ignored files for all repositories on your computer" here:
-# https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
-# (accessed on 2022-07-14). For example, Emacs checkpoint and backup files are
-# things that are not specific to a given project; rather, Emacs users will
-# see them created everywhere, in all projects, because they're a byproduct
-# of using Emacs, not a consequence of working on a particular project. Thus,
-# they belong in a user's global ignores list, not in this project .gitignore.
 #
-# A useful starting point for global .gitignore file contents can be found at
-# https://github.com/github/gitignore/tree/main/Global (as of 2022-07-14).
-# =============================================================================
+# The approach we suggest is to add ONLY project-specific rules here.
+#-------------------------------------------------------------------------------------
+.idea/
+.DS_Store
+.github/drafts
+
+# ------- CONSIDER THESE FILES -------
+# 1. Data Files & Directories           (*.mrc, *.db, *.dat, *.sqlite)
+# 2. Log Files                          (*.log)
+# 3. Byte-compiled | Optimized Files    (__pycache__/, *.py[cod])
+# 4, Environments & Configuration Files (*.env, *.ini, *.conf)
+# 5. Development Directories            (dev)
+# 6. Build                              (build/, *.egg-info)

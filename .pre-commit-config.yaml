@@ -1,0 +1,50 @@
+# --------------------------------------------------------------------
+# Pre-commit configuration file | https://pre-commit.com/
+#
+# You'll need to install pre-commit to use this file.
+# pre-commit install
+#
+# To run pre-commit check without making a commit:
+# pre-commit run --all-files
+#
+# Update pre-commit hook versions:
+# pre-commit autoupdate
+# --------------------------------------------------------------------
+
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.4.0
+  hooks:
+  - id: check-ast
+  - id: fix-byte-order-marker
+  - id: check-case-conflict
+  - id: trailing-whitespace
+  - id: mixed-line-ending
+  - id: check-json
+  - id: check-yaml
+  - id: check-toml
+  - id: check-xml
+  - id: debug-statements
+  - id: detect-private-key
+
+- repo: https://github.com/PyCQA/bandit
+  rev: 1.7.4
+  hooks:
+  - id: bandit
+
+- repo: https://github.com/PyCQA/isort
+  rev: 5.11.4
+  hooks:
+  - id: isort
+
+- repo: https://github.com/markdownlint/markdownlint
+  rev: v0.12.0
+  hooks:
+  - id: markdownlint
+    args: ['-r', '~MD033']
+
+- repo: https://github.com/pypa/pip-audit
+  rev: v2.4.12
+  hooks:
+    -   id: pip-audit
+        args: ['-r', 'Pipfile.lock', '-f', 'cyclonedx-json', '-o', 'sbom.json']

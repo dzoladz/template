@@ -4,4 +4,3 @@
 
 * Write about a change here
 * Write about another change here
-* Write about a 3rd change
